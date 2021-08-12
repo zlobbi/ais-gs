@@ -10,7 +10,7 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author kadyrbek.mavlyanov@gamil.com
+ * created by kadyrbek.mavlyanov@gamil.com
  * 11/8/21
  */
 public abstract class AbstractCrudService<F, E extends BaseEntity> implements FormCrudService<F, E> {

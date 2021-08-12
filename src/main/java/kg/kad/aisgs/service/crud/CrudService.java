@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author kadyrbek.mavlyanov@gamil.com
+ * created by kadyrbek.mavlyanov@gamil.com
  * 11/8/21
  */
 public interface CrudService<E extends BaseEntity> {
@@ -18,15 +18,6 @@ public interface CrudService<E extends BaseEntity> {
             Predicate predicate,
             @NotNull Pageable pageable
     );
-
-//    @NotNull
-//    default Page<E> findAll(
-//            Predicate predicate,
-//            @NotNull Pageable pageable,
-//            @NotNull User user
-//    ) {
-//        throw new NotImplementedException();
-//    }
 
     @NotNull
     E save(

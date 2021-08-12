@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * @author kadyrbek.mavlyanov@gamil.com
+ * created by kadyrbek.mavlyanov@gamil.com
  * 11/8/21
  */
 @Getter

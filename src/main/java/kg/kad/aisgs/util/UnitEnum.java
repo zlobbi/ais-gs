@@ -1,7 +1,7 @@
 package kg.kad.aisgs.util;
 
 /**
- * @author kadyrbek.mavlyanov@gamil.com
+ * created by kadyrbek.mavlyanov@gamil.com
  * 11/8/21
  */
 public enum UnitEnum {

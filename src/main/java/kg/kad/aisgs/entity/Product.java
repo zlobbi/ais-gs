@@ -11,7 +11,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author kadyrbek.mavlyanov@gamil.com
+ * created by kadyrbek.mavlyanov@gamil.com
  * 11/8/21
  */
 @Getter
