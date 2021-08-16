@@ -22,10 +22,6 @@
     <script type="text/javascript" src="/assets/js/plugins/visualization/chart/chart.min.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/loaders/blockui.min.js"></script>
 
-<#--Forms-->
-    <script type="text/javascript" src="/assets/js/plugins/forms/styling/uniform.min.js"></script>
-<#--Forms-->
-
 <#-- DataTables -->
     <link href="/assets/css/datatables/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/datatables/extensions/autoFill.bootstrap5.min.css" rel="stylesheet" type="text/css">
@@ -44,71 +40,63 @@
 
     <script type="text/javascript" src="/assets/js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/tables/datatables/dataTables.bootstrap5.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.autoFill.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/autoFill.bootstrap5.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/buttons.bootstrap5.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.autoFill.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/autoFill.bootstrap5.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.buttons.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/buttons.bootstrap5.min.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/buttons.colVis.min.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/buttons.html5.min.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/buttons.print.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.colReorder.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.fixedColumns.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.fixedHeader.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.keyTable.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.responsive.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.rowGroup.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.rowReorder.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.scroller.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.searchBuilder.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.searchPanes.min.js"></script>
-    <script type="text/javascript" src="/assets/js/plugins/tables/datatables/extensions/dataTables.select.min.js"></script>
-<#-- DataTables end -->
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.colReorder.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.keyTable.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.responsive.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.rowGroup.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.rowReorder.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.scroller.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.searchBuilder.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.searchPanes.min.js"></script>
+    <script type="text/javascript"
+            src="/assets/js/plugins/tables/datatables/extensions/dataTables.select.min.js"></script>
 
 <#-- Select2 -->
     <link href="/assets/css/plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/assets/js/plugins/forms/selects/select2.full.min.js"></script>
-<#-- Select2 end -->
 
 <#-- Daterangepicker -->
     <link href="/assets/css/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/assets/js/plugins/ui/moment/moment-with-locales.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/pickers/daterangepicker.js"></script>
-<#-- Daterangepicker end -->
 
 <#-- Anytime -->
     <link href="/assets/css/plugins/anytime/anytime.5.2.0.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/assets/js/plugins/pickers/anytime/anytime.5.2.0.min.js"></script>
-<#-- Anytime end -->
-
-<#-- Sweetalert2 -->
-    <link href="/assets/css/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/assets/js/plugins/notifications/sweetalert2.min.js"></script>
-<#-- Sweetalert2 end -->
-
-<#-- SmartWizard -->
-    <link href="/assets/css/plugins/smart_wizard/smart_wizard_all.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/assets/js/plugins/forms/smart_wizard/jquery.smartWizard.js"></script>
-<#-- SmartWizard end -->
 
 <#-- jQuery Validation -->
     <script type="text/javascript" src="/assets/js/plugins/forms/validation/jquery.validate.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/forms/validation/additional-methods.js"></script>
     <script type="text/javascript" src="/assets/js/plugins/forms/validation/localization/messages_ru.js"></script>
-<#-- jQuery Validation end -->
 
 <#-- VUEJS -->
-    <script type="text/javascript" src="/assets/js/core/vue-components/vue.js"></script>
     <script type="text/javascript" src="/assets/js/core/vue-components/axios.min.js"></script>
-<#-- VUEJS end -->
-
-<#-- Map -->
-    <script type="text/javascript" src="/assets/js/heatmap/OpenLayers.js"></script>
-<#-- Map -->
 
 <#-- Main -->
     <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/assets/js/core/app.js"></script>
-<#-- Main end -->
 
     <script>
         srvTime = new Date(${.now?long?c}).getTime();
@@ -126,98 +114,60 @@
 
 <#macro sidebar>
     <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/"
-                       class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+        <div class="row">
+            <div class="col-sm-auto bg-light sticky-top">
+                <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+                       data-bs-placement="right" data-bs-original-title="Icon-only">
+                        <i class="bi-bootstrap fs-1"></i>
                     </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                        id="menu">
+                    <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            <a href="#" class="nav-link link-success py-3 px-2" title="" data-bs-toggle="tooltip"
+                               data-bs-placement="right" data-bs-original-title="Home">
+                                <i class="bi-house fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span
-                                        class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2
-                                    </a>
-                                </li>
-                            </ul>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                               data-bs-placement="right" data-bs-original-title="Dashboard">
+                                <i class="bi-speedometer2 fs-1"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                               data-bs-placement="right" data-bs-original-title="Orders">
+                                <i class="bi-table fs-1"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
-                                        1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
-                                        2</a>
-                                </li>
-                            </ul>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                               data-bs-placement="right" data-bs-original-title="Products">
+                                <i class="bi-heart fs-1"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span>
+                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                               data-bs-placement="right" data-bs-original-title="Customers">
+                                <i class="bi-people fs-1"></i>
                             </a>
                         </li>
                     </ul>
-                    <hr>
-                    <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                           id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
-                                 class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">loser</span>
+                    <div class="dropdown">
+                        <a href="#"
+                           class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                           id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-person-circle h2"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
                             <li><a class="dropdown-item" href="#">New project...</a></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col py-3">
+            <div class="col-sm p-3 min-vh-100">
                 <#nested />
             </div>
         </div>

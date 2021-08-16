@@ -4,7 +4,7 @@
 <#macro render table rowNumber=false>
     <div class="card card-table">
         <div class="card-header d-flex justify-content-between">
-            <h5>${table.title()}</h5>
+            <h5><@spring.message "products.list"/></h5>
             <button type="button" class="btn btn-light rounded-pill" id="${table.tableId()}-reload">
                 <i class="bi bi-arrow-repeat"></i>
             </button>
@@ -14,21 +14,21 @@
                 <div id="${table.tableId()}-filter" class="col-12 collapse">
                     <#if table.hasFilters()>
                         <form id="${table.tableId()}-filter-form">
-                            <div class="row">
+                            <div class="row form-horizontal form-group">
                                 <#assign filters = table.getFilters()>
                                 <#list 0..filters?size-1 as i>
-                                    <div class="col-4">
+                                    <div class="col-md-6 col-sm-12">
                                         <@.vars[filters[i].node()] filters[i] />
                                     </div>
                                 </#list>
-                            </div>
-                            <div class="text-end">
-                                <a id="${table.tableId()}-filter-search" class="btn btn-primary">
-                                    ${springMacroRequestContext.getMessage("action.accept")}
-                                </a>
-                                <button type="reset" class="btn btn-danger" id="${table.tableId()}-filter-clear">
-                                    ${springMacroRequestContext.getMessage("action.reset")}
-                                </button>
+<#--                                <div class="text-end col-md-2">-->
+<#--                                    <a id="${table.tableId()}-filter-search" class="btn btn-primary">-->
+<#--                                        ${springMacroRequestContext.getMessage("action.search")}-->
+<#--                                    </a>-->
+<#--                                    <button type="reset" class="btn btn-danger" id="${table.tableId()}-filter-clear">-->
+<#--                                        ${springMacroRequestContext.getMessage("action.clear")}-->
+<#--                                    </button>-->
+<#--                                </div>-->
                             </div>
                         </form>
                     </#if>
@@ -54,7 +54,8 @@
     </div>
     <script>
         $(function () {
-            let columns = JSON.parse('${table.getJsonColumn()}'.replace(/&quot;/g, '"'));
+            let columns = '${table.getJsonColumn()}'.replace(/&quot;/g, '\"');
+            columns = JSON.parse(columns);
             <#if rowNumber>
             columns.unshift({
                 data: "id",
@@ -74,13 +75,6 @@
             let middleDom = '<"col-lg-12 pt-2 px-0"t>';
             let footerDom = '<"col-lg-12 pt-2 px-0"<"d-flex justify-content-lg-between-or-center"<"d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"i>p>>';
 
-            let l =
-                '<div class="input-group"> ' +
-                '   <div class="input-group-text bg-white">' +
-                '       <@spring.message 'table.showRowsStart'/>' +
-                '   </div>' +
-                '   _MENU_' +
-                '</div>';
             let i =
                 '<span class="btn border" style="cursor: default;">' +
                 '   <@spring.message 'table.showingPageBegin'/> _START_  <@spring.message 'table.showingPageMiddle'/> _END_ <@spring.message 'table.showingPageEnd'/> _TOTAL_' +
@@ -90,13 +84,12 @@
                 autoWidth: ${table.getAutoWidth()?c},
                 dom: '<"row"' + headerDom + middleDom + footerDom + '>',
                 processing: true,
-                bSort: false,
                 serverSide: true,
+                bLengthChange: false,
                 bFilter: false,
                 scrollX: true,
                 colReorder: true,
                 language: {
-                    lengthMenu: l,
                     zeroRecords: "<@spring.message 'table.nothingToShow' />",
                     info: i,
                     infoEmpty: "",
@@ -118,7 +111,7 @@
                     style: 'single'
                 },
                 pageLength: ${table.getRowsPerPage()},
-                order: '${table.order()}'.replace(/&quot;/g, '"'),
+                order: ${table.order()},
                 ajax: {
                     url: "${table.url()}",
                     type: 'POST',
@@ -130,17 +123,11 @@
                         return JSON.stringify(d);
                     }
                 },
-                <#if rowNumber>
-                drawCallback: setRowNo,
-                </#if>
+                                <#if rowNumber>
+                                drawCallback: setRowNo,
+                                </#if>
                 columns: columns,
                 buttons: [
-                    {
-                        extend: 'colvis',
-                        text: '<i class="bi bi-gear-fill"></i> <@spring.message "table.columns" />',
-                        init: (api, node, config) => $(node).removeClass('btn-secondary'),
-                        align: 'button-left'
-                    },
                     <#if table.hasFilters()>
                     {
                         text: '<i class="bi bi-filter"></i> <@spring.message "table.filters" />',
@@ -332,7 +319,7 @@
             $('.show-side-btn').click(function () {
                 ${table.tableCamelCaseId()}dataTable.columns.adjust().draw();
             })
-        })
+        });
 
         var ${table.tableCamelCaseId()}dataTableSelectedRow = function (data) {
 
