@@ -7,9 +7,13 @@ import kg.kad.aisgs.util.MessageHelper;
  * created by kadyrbek.mavlyanov@gamil.com
  * 14/8/21
  */
-public class MonthFilter implements Filter {
+public class DateRangeFilter implements Filter {
 
-    private static final long serialVersionUID = -3586305336491974109L;
+    public static DateRangeFilter of(String name, String title) {
+        return new DateRangeFilter()
+                .setName(name)
+                .setTitle(title);
+    }
 
     private String title;
 
@@ -19,7 +23,7 @@ public class MonthFilter implements Filter {
         return title;
     }
 
-    public MonthFilter setTitle(String title) {
+    public DateRangeFilter setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -28,7 +32,7 @@ public class MonthFilter implements Filter {
         return name;
     }
 
-    public MonthFilter setName(String name) {
+    public DateRangeFilter setName(String name) {
         this.name = name;
         return this;
     }
@@ -45,6 +49,6 @@ public class MonthFilter implements Filter {
 
     @Override
     public String node() {
-        return "month";
+        return "dateRange";
     }
 }

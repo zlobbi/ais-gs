@@ -1,8 +1,8 @@
-package kg.kad.aisgs.table.core;
+package kg.kad.aisgs.table.core.legend;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -11,11 +11,8 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class FilterTemplate {
+public class BaseLegend {
 
-    private String id;
-
-    private String title;
+    protected String title;
 }
