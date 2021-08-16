@@ -1,0 +1,315 @@
+.btn-call{
+    background: #36b736;
+    border-color: #36b736;
+}
+/* Success Icon On Asterisk*/
+.success-checkmark {
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+}
+.success-checkmark .check-iconn {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #4CAF50;
+}
+.success-checkmark .check-iconn::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+.success-checkmark .check-iconn::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotate-circle 4.25s ease-in;
+}
+.success-checkmark .check-iconn::before, .success-checkmark .check-iconn::after {
+    content: '';
+    height: 100px;
+    position: absolute;
+    background: #FFFFFF;
+    transform: rotate(-45deg);
+}
+.success-checkmark .check-iconn .iconn-line {
+    height: 5px;
+    background-color: #4CAF50;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+.success-checkmark .check-iconn .iconn-line.line-tip {
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 0.75s;
+}
+.success-checkmark .check-iconn .iconn-line.line-long {
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-line-long 0.75s;
+}
+.success-checkmark .check-iconn .iconn-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid rgba(76, 175, 80, 0.5);
+}
+.success-checkmark .check-iconn .iconn-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: #FFFFFF;
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+    5% {
+        transform: rotate(-45deg);
+    }
+    12% {
+        transform: rotate(-405deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+@keyframes icon-line-tip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+@keyframes icon-line-long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+/**/
+#divCallCtrl .contactDisplay {
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+}
+/*TODO: remove if photo is needed*/
+.contactImage{
+    display: none;
+}
+#divCallCtrl .contactDisplay .contactImage {
+    background-image: url('/assets/images/no_user_logo.png');
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #bbbbbb;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 50%;
+}
+/*#divCallCtrl .contactDisplay .contactInfo {*/
+/*    position: relative;*/
+/*    top: 17px;*/
+/*    text-align: center;*/
+/*    width: 189px;*/
+/*    height: 39px;*/
+/*}*/
+#divCallCtrl .contactDisplay .contactInfo span {
+    font-weight: bold;
+}
+.call-answer-hangup{
+    display: flex;
+    min-width: 150px;
+    padding: 0 15px;
+}
+#timer{
+    font-weight: bold;
+    display: block;
+}
+
+/* modal call box*/
+.window {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 310px;
+    height: 346px;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 5;
+}
+.window .window-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    height: 30px;
+    width: 60px;
+}
+.window .window-controls .maximize {
+    background-color: #e8eaec;
+    position: absolute;
+    top: -30px;
+    opacity: 0;
+    left: 0;
+    z-index: 9;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #b4b9be;
+    cursor: pointer;
+    transition: opacity .3s .5s, top 0s .8s;
+}
+.window .window-controls .close,
+.window .window-controls .minimize {
+    opacity: .5;
+    cursor: pointer;
+}
+.window .window-controls .close:hover,
+.window .window-controls .minimize:hover {
+    opacity: .7;
+}
+.window .window-controls .close:active,
+.window .window-controls .minimize:active {
+    opacity: 1;
+}
+.window .window-controls .close {
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.window .window-controls .close:before, .window .window-controls .close:after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    border-radius: 2px;
+    top: 14px;
+    left: 9px;
+}
+.window .window-controls .close:before {
+    /*-webkit-transform: rotate(45deg);
+    transform: rotate(45deg);*/
+    -webkit-transform: translateX(3px) rotate(0deg);
+    transform: translateX(3px) rotate(0deg);
+}
+.window .window-controls .close:after {
+    /*-webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);*/
+    -webkit-transform: translateX(3px) rotate(-90deg);
+    transform: translateX(3px) rotate(-90deg);
+}
+.window .window-controls .minimize {
+    width: 30px;
+    height: 30px;
+    float: left;
+    position: relative;
+}
+.window .window-controls .minimize:before, .window .window-controls .minimize:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    border-radius: 2px;
+    top: 14px;
+    left: 10px;
+}
+.window .window-controls .minimize:before {
+    -webkit-transform: translateX(-3px) rotate(45deg);
+    transform: translateX(-3px) rotate(45deg);
+}
+.window .window-controls .minimize:after {
+    -webkit-transform: translateX(3px) rotate(-45deg);
+    transform: translateX(3px) rotate(-45deg);
+}
+
+.window .window-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.minimized  {
+    top: 100%;
+    -webkit-transform: translate(-50%, -30px);
+    transform: translate(-50%, -30px);
+    width: 200px;
+    opacity: .5;
+}
+.minimized:hover {
+    opacity: .75;
+}
+.minimized .maximize {
+    top: 0;
+    opacity: 1;
+    transition: opacity .3s .5s, top 0s .5s;
+}
