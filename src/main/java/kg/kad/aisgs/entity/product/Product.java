@@ -1,12 +1,14 @@
-package kg.kad.aisgs.entity;
+package kg.kad.aisgs.entity.product;
 
-import kg.kad.aisgs.entity.base.BaseEntity;
+import kg.kad.aisgs.entity.base.TimedEntity;
 import kg.kad.aisgs.util.UnitEnum;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -19,8 +21,9 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Audited
 @Entity
-public class Product extends BaseEntity {
+public class Product extends TimedEntity {
 
     private static final long serialVersionUID = 2431613158820531769L;
 
@@ -31,5 +34,8 @@ public class Product extends BaseEntity {
     @Enumerated(value = EnumType.STRING)
     private UnitEnum unit;
 
-    private Double amount;
+    private String description;
+
+    @OneToOne(mappedBy = "product")
+    private InStock inStock;
 }

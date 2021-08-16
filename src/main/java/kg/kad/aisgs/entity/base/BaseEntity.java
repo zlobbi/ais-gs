@@ -3,7 +3,6 @@ package kg.kad.aisgs.entity.base;
 import com.querydsl.core.annotations.PropertyType;
 import com.querydsl.core.annotations.QueryType;
 import lombok.Getter;
-import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,7 +13,6 @@ import java.util.Objects;
  * 11/8/21
  */
 @Getter
-@Audited
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 

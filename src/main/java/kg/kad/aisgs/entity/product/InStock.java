@@ -44,5 +44,4 @@ public class InStock extends TimedEntity {
 
     @OneToOne(mappedBy = "inStock")
     private Outgoing outgoing;
-
 }

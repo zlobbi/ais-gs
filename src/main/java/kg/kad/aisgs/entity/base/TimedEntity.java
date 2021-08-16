@@ -2,7 +2,6 @@ package kg.kad.aisgs.entity.base;
 
 import kg.kad.aisgs.util.TimeHelper;
 import lombok.Getter;
-import org.hibernate.envers.Audited;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -17,7 +16,6 @@ import java.util.Objects;
  * 12/8/21
  */
 @Getter
-@Audited
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class TimedEntity extends BaseEntity {
@@ -37,5 +35,4 @@ public abstract class TimedEntity extends BaseEntity {
     public String getUpdatedAtFormatted() {
         return Objects.nonNull(updatedAt) ? updatedAt.format(TimeHelper.DATE_TIME_FORMATTER) : "";
     }
-
 }
